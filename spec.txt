@@ -1,0 +1,23 @@
+A) A Function in which If I give a point and the matrix we get no: of live neighbours of that point
+   TestCases:
+   1. point on center
+      a] Less than 2 live neighbour
+      b] Greter than 3 live neighbour
+      c] Exactly 3 neighbours
+   2. point on edge
+   3. point on side
+   
+
+B) A Function in which if we give a matrix it return the next generation matrix
+   Loop that matrix
+   Call function A for all the points--->we will get list of neighbours
+   Check wheather that point is True(Live) or False(Dead)
+   if that point is live(True)
+      call function A
+      	   it gives a dictionary in which says the no:of live cells and dead cells
+	   According to that I apply the Rules
+   But
+   If that point is Dead(False)
+       call function A
+      	   it gives a dictionary in which says the no:of live cells and dead cells
+	   According to that I apply the Rules
