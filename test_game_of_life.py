@@ -14,6 +14,12 @@ def test_more_than_one_neighbours_for_point_on_center():
 
 def test_neighbour_for_point_on_edge():
     grid = [[True,True,False],[True,True,False],[False,False,False]]
-    a = game_of_life.get_neighbours(m=grid,p = [2,2])
-    e = 1
+    a = game_of_life.get_neighbours(m=grid,p = [2,0])
+    e = 2
+    assert a == e
+    
+def test_neighbour_for_point_on_side():
+    grid = [[True,True,False],[True,True,False],[False,False,False]]
+    a = game_of_life.get_neighbours(m=grid,p = [1,2])
+    e = 2
     assert a == e
