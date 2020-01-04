@@ -1,11 +1,10 @@
 A) A Function in which If I give a point and the matrix we get no: of live neighbours of that point
-   TestCases:
-   1. point on center
-      a] Less than 2 live neighbour
-      b] Greter than 3 live neighbour
-      c] Exactly 3 neighbours
-   2. point on edge
-   3. point on side
+
+TestCases:
+   Case 1) point on center (one neighbour)
+   Case 2) point on center (more than one neighbour)
+   Case 3) point on edge
+   Case 4) point on side
    
 
 B) A Function in which if we give a matrix it return the next generation matrix
@@ -21,3 +20,24 @@ B) A Function in which if we give a matrix it return the next generation matrix
        call function A
       	   it gives a dictionary in which says the no:of live cells and dead cells
 	   According to that I apply the Rules
+
+Rules:
+
+If it is a LIVE Cell
+   Rule 1 : 2 or 3 live neighbours [n == 2 or n == 3] ---> Cell will Live on next generation
+   
+   Rule 2 : Less than 1 live neighbour [n < 2]-----------> Cell will Die on next generation [Under Population]
+   
+   Rule 3 : More than 3 live neighbours [n > 3]----------> Cell will Die on next generation [Over Population]
+
+If it is a DEAD Cell
+   Rule 4: Exactly 3 live neighbours [n == 3] -----------> Cell will Live on next generation [Reproduction]
+
+
+Test Cases:
+
+a) Here Next generation matrix will be such that all cells are dead (3 * 3 matrix)
+    Case 5)  Input matrix with no live cell
+    Case 6)  Input matrix with one live cells
+    Case 7)  Input matrix with two live cells but neighbours (Rule 2)
+    Case 8)  Input matrix with two live cell but not neighbours

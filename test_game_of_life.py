@@ -23,3 +23,11 @@ def test_neighbour_for_point_on_side():
     a = game_of_life.get_neighbours(m=grid,p = [1,2])
     e = 2
     assert a == e
+
+    
+
+def test_next_generation_no_live_cells():
+    grid = [[False,False,False],[False,False,False],[False,False,False]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[False,False,False],[False,False,False],[False,False,False]]
+    assert a == e

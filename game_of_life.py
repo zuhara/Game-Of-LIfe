@@ -17,3 +17,8 @@ def get_neighbours(m,p):
     return live_neighbour
 
 
+def next_generation(m):
+    for i in range(len(m)):
+        for j in range(len(m[0])):
+            m[i][j] = False
+    return m
