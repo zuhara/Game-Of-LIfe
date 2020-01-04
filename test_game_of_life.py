@@ -31,3 +31,21 @@ def test_next_generation_no_live_cells():
     a = game_of_life.next_generation(m = grid)
     e = [[False,False,False],[False,False,False],[False,False,False]]
     assert a == e
+
+def test_next_generation_one_live_cell():
+    grid = [[False,False,False],[False,True,False],[False,False,False]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[False,False,False],[False,False,False],[False,False,False]]
+    assert a == e
+
+def test_next_generation_two_neighbour_live_cells():
+    grid = [[False,False,False],[False,True,False],[False,True,False]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[False,False,False],[False,False,False],[False,False,False]]
+    assert a == e
+
+def test_next_generation_two_not_neighbour_live_cells():
+    grid = [[True,False,False],[False,False,False],[False,False,True]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[False,False,False],[False,False,False],[False,False,False]]
+    assert a == e
