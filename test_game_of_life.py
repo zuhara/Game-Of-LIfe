@@ -166,4 +166,9 @@ def test_next_generation_five_live_cells():
     e = [[True,False,False],[True,False,True],[False,False,True]]
     assert a == e
 
+def test_next_generation_six_live_cells():
+    grid = [[True,True,True],[False,False,False],[True,True,True]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[False,True,False],[False,False,False],[False,True,False]]
+    assert a == e
 
