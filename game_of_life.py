@@ -18,7 +18,23 @@ def get_neighbours(m,p):
 
 
 def next_generation(m):
-    for i in range(len(m)):
-        for j in range(len(m[0])):
-            m[i][j] = False
-    return m
+    rows = len(m)
+    cols = len(m[0])
+    
+    next_gen = [[0 for i in range(rows)] for j in range(cols)]
+
+    for i in range(rows):
+        for j in range(cols):
+            if m[i][j]:
+                live_neighbours = get_neighbours(m,[i,j])
+                if live_neighbours < 2 :           # Rule 2 
+                    next_gen[i][j] = False    
+                else:
+                    next_gen[i][j] = m[i][j]
+            else:
+                live_neighbour = get_neighbours(m,[i,j])
+                if live_neighbour == 3:           # Rule 4
+                    next_gen[i][j] = True
+                else:
+                    next_gen[i][j] = m[i][j]
+    return next_gen

@@ -41,3 +41,15 @@ a) Here Next generation matrix will be such that all cells are dead (3 * 3 matri
     Case 6)  Input matrix with one live cells
     Case 7)  Input matrix with two live cells but neighbours (Rule 2)
     Case 8)  Input matrix with two live cell but not neighbours
+
+b) Input matrix with three neighbours
+   In which all are not neighbours
+    Case 9) and all at different corners and  [Rule 2 and 4]
+
+    in which three  all are neighbours
+    Case 10) and all at a corner of 3 * 3 matrix [Rule 1 and 4]
+    Case 11) and all at differnt sides [Rule 2 , 1 , 4]
+    Case 12) and all at one side [Rule 2 , 1 , 4]
+    Case 13) and all at center [Rule 1 and 4]
+    Case 14) diagonally [Rule 1 and 2]
+    
