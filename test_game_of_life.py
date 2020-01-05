@@ -74,3 +74,9 @@ def test_next_generation_three_live_cells_neighbours_all_at_same_sides():
     a = game_of_life.next_generation(m = grid)
     e = [[False,True,False],[False,True,False],[False,False,False]]
     assert a == e
+
+def test_next_generation_three_live_cells_neighbours_all_at_center():
+    grid = [[False,False,False],[True,True,True],[False,False,False]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[False,True,False],[False,True,False],[False,True,False]]
+    assert a == e
