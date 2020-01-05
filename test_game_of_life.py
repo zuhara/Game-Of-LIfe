@@ -148,4 +148,10 @@ def test_next_generation_four_live_cells_three_through_side_and_one_on_side_far(
     e = [[False,True,False],[True,False,False],[False,True,False]]
     assert a == e
 
+def test_next_generation_five_live_cells_diagonally_cross():
+    grid = [[True,False,True],[False,True,False],[True,False,True]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[False,True,False],[True,False,True],[False,True,False]]
+    assert a == e
+
 
