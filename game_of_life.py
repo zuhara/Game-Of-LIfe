@@ -25,8 +25,8 @@ def next_generation(m):
 
     for i in range(rows):
         for j in range(cols):
+            live_neighbours = get_neighbours(m,[i,j])
             if m[i][j]:
-                live_neighbours = get_neighbours(m,[i,j])
                 if live_neighbours < 2 :           # Rule 2 
                     next_gen[i][j] = False
                 elif live_neighbours == 2 :        # Rule 1
@@ -36,8 +36,7 @@ def next_generation(m):
                 else:
                     next_gen[i][j] = m[i][j]
             else:
-                live_neighbour = get_neighbours(m,[i,j])
-                if live_neighbour == 3:           # Rule 4
+                if live_neighbours == 3:           # Rule 4
                     next_gen[i][j] = True
                 else:
                     next_gen[i][j] = m[i][j]
