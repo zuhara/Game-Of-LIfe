@@ -86,3 +86,11 @@ def test_next_generation_three_live_cells_neighbours_diagonally():
     a = game_of_life.next_generation(m = grid)
     e = [[False,False,False],[False,True,False],[False,False,False]]
     assert a == e
+
+    
+def test_next_generation_four_live_cells_not_neighbours():
+    grid = [[True,False,True],[False,False,False],[True,False,True]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[False,False,False],[False,False,False],[False,False,False]]
+    assert a == e
+

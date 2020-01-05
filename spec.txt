@@ -53,3 +53,31 @@ b) Input matrix with three neighbours
     Case 13) and all at center [Rule 1 and 4]
     Case 14) diagonally [Rule 1 and 2]
     
+c) Input with four neighbours
+
+   Not neighbours
+   Case 15) all at corners
+
+   Neighbours
+   Case 16) all at sides
+   Case 17) three diagonally and one on side
+   Case 18) three diagonally and one at a corner
+   Case 19) three on center and one at a corner
+   Case 20) three on center and one on side
+   Case 21) three on side and one on center
+   Case 22) three on side and one on corner
+   Case 23) three on side and one on side near
+   Case 24) three on side and one on side far
+
+d) Input with five neighbours
+
+   Case 25) *
+   Case 26) +
+
+e) Input with six neighbours
+
+   Case 27) t t t
+   	    f f f
+	    t t t
+
+   Case 28) All true
