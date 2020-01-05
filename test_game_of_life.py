@@ -100,3 +100,52 @@ def test_next_generation_four_live_cells_neighbours_each_on_side():
     e = [[False,True,False],[True,False,True],[False,True,False]]
     assert a == e
 
+def test_next_generation_four_live_cells_three_diagonally_and_one_on_side():
+    grid = [[True,True,False],[False,True,False],[False,False,True]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[True,True,False],[True,True,True],[False,False,False]]
+    assert a == e
+
+def test_next_generation_four_live_cells_three_diagonally_and_one_on_corner():
+    grid = [[True,False,False],[False,True,False],[True,False,True]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[False,False,False],[True,True,False],[False,True,False]]
+    assert a == e
+
+def test_next_generation_four_live_cells_three_through_center_and_one_at_corner():
+    grid = [[True,True,False],[False,True,False],[False,True,False]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[True,True,False],[False,True,True],[False,False,False]]
+    assert a == e
+
+def test_next_generation_four_live_cells_three_through_center_and_one_at_side():
+    grid = [[False,True,False],[True,True,False],[False,True,False]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[True,True,False],[True,True,True],[True,True,False]]
+    assert a == e
+
+def test_next_generation_four_live_cells_three_through_side_and_one_at_center():
+    grid = [[True,False,False],[True,True,False],[True,False,False]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[True,True,False],[True,True,False],[True,True,False]]
+    assert a == e
+
+def test_next_generation_four_live_cells_three_through_side_and_one_at_corner():
+    grid = [[True,False,False],[True,False,False],[True,False,True]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[False,False,False],[True,False,False],[False,True,False]]
+    assert a == e
+
+def test_next_generation_four_live_cells_three_through_side_and_one_on_side_near():
+    grid = [[True,True,False],[True,False,False],[True,False,False]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[True,True,False],[True,False,False],[False,False,False]]
+    assert a == e
+
+def test_next_generation_four_live_cells_three_through_side_and_one_on_side_far():
+    grid = [[True,False,False],[True,False,True],[True,False,False]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[False,True,False],[True,False,False],[False,True,False]]
+    assert a == e
+
+
