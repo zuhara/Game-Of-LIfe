@@ -160,4 +160,10 @@ def test_next_generation_five_live_cells_straight_cross():
     e = [[True,True,True],[True,False,True],[True,True,True]]
     assert a == e
 
+def test_next_generation_five_live_cells():
+    grid = [[True,False,False],[True,True,True],[False,False,True]]
+    a = game_of_life.next_generation(m = grid)
+    e = [[True,False,False],[True,False,True],[False,False,True]]
+    assert a == e
+
 
