@@ -42,7 +42,7 @@ a) Here Next generation matrix will be such that all cells are dead (3 * 3 matri
     Case 7)  Input matrix with two live cells but neighbours (Rule 2)
     Case 8)  Input matrix with two live cell but not neighbours
 
-b) Input matrix with three neighbours
+b) Input matrix with three live cells
    In which all are not neighbours
     Case 9) and all at different corners and  [Rule 2 and 4]
 
@@ -53,7 +53,7 @@ b) Input matrix with three neighbours
     Case 13) and all at center [Rule 1 and 4]
     Case 14) diagonally [Rule 1 and 2]
     
-c) Input with four neighbours
+c) Input with four live cells
 
    Not neighbours
    Case 15) all at corners
@@ -69,15 +69,16 @@ c) Input with four neighbours
    Case 23) three on side and one on side near
    Case 24) three on side and one on side far
 
-d) Input with five neighbours
+d) Input with five live cells
 
    Case 25) *
    Case 26) +
+   Case 27) Five live cell combinations
 
-e) Input with six neighbours
+e) Input with six live cells
 
-   Case 27) t t t
+   Case 28) t t t
    	    f f f
 	    t t t
 
-   Case 28) All true
+   Case 29) All live cells
