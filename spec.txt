@@ -80,5 +80,21 @@ e) Input with six live cells
    Case 28) t t t
    	    f f f
 	    t t t
+f) Input with seven live cells
+   Case 29) t t t
+   	    f t f
+	    t t t
+	    
+g) Input with all live cells
+   Case 30) All live cells
 
-   Case 29) All live cells
+h) Input matrix is not a 3 * 3 matrix
+   Case 31) t t
+   	    f t
+	    t f
+
+
+
+C) A function to display a matrix to a pattern
+   Case 32) A 3 * 3 matrix
+   Case 33) A 3 * 2 matrix

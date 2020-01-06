@@ -3,13 +3,13 @@ def get_neighbours(m,p):
     c = p[1]
     n = [[r-1,c],[r+1,c],[r,c+1],[r,c-1],[r-1,c-1],[r-1,c+1],[r+1,c-1],[r+1,c+1]]
     
-#Find the position of neighbours
+    #Find the position of neighbours
     neighbours = []
     for i in n:
         if (0 <= i[0] < len(m)) and (0 <= i[1] < len(m[0])):
             neighbours.append([i[0],i[1]])
             
-#Find number of live neighbours
+    #Find number of live neighbours
     live_neighbour = 0
     for point in neighbours:
         if m[point[0]][point[1]]:
@@ -20,7 +20,6 @@ def get_neighbours(m,p):
 def next_generation(m):
     rows = len(m)
     cols = len(m[0])
-    
     
     next_gen = [[0 for i in range(cols)] for j in range(rows)]
 
@@ -42,3 +41,7 @@ def next_generation(m):
                 else:
                     next_gen[i][j] = m[i][j]
     return next_gen
+
+
+def dispaly(m):
+    return " *  0  * \n *  0  * \n *  0  * \n"

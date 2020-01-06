@@ -191,3 +191,10 @@ def test_next_generation_for_various_size_matrix():
     a = game_of_life.next_generation(m = grid)
     e = [[True,True],[False,True],[False,False]]
     assert a == e
+
+
+def test_display_3_by_3_matrix():
+    grid = [[False,True,False],[False,True,False],[False,True,False]]
+    a = game_of_life.dispaly(m = grid)
+    e = " *  0  * \n *  0  * \n *  0  * \n"
+    assert a == e
