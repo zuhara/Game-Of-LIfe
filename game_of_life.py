@@ -44,4 +44,12 @@ def next_generation(m):
 
 
 def dispaly(m):
-    return " *  0  * \n *  0  * \n *  0  * \n"
+    string = ""
+    for  i in range(len(m)):
+        for j in range(len(m[0])):
+            if m[i][j]:
+                string = string + " 0 "
+            else:
+                string = string + " * "
+        string = string + "\n"
+    return string

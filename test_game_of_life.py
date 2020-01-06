@@ -198,3 +198,9 @@ def test_display_3_by_3_matrix():
     a = game_of_life.dispaly(m = grid)
     e = " *  0  * \n *  0  * \n *  0  * \n"
     assert a == e
+
+def test_display_3_by_2_matrix():
+    grid = [[False,True],[False,True],[False,True]]
+    a = game_of_life.dispaly(m = grid)
+    e = " *  0 \n *  0 \n *  0 \n"
+    assert a == e
