@@ -1,3 +1,4 @@
+import time
 def get_neighbours(m,p):
     r = p[0]
     c = p[1]
@@ -58,6 +59,7 @@ grid = [[False,True,False],[False,True,False],[False,True,False]]
 n = 1
 while n < 10:
     n = n + 1
+    time.sleep(0.5)
     m = next_generation(grid)
     grid = m
     d = display(grid)
