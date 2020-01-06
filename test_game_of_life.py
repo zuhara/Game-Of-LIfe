@@ -195,12 +195,13 @@ def test_next_generation_for_various_size_matrix():
 
 def test_display_3_by_3_matrix():
     grid = [[False,True,False],[False,True,False],[False,True,False]]
-    a = game_of_life.dispaly(m = grid)
+    a = game_of_life.display(m = grid)
     e = " *  0  * \n *  0  * \n *  0  * \n"
     assert a == e
 
 def test_display_3_by_2_matrix():
     grid = [[False,True],[False,True],[False,True]]
-    a = game_of_life.dispaly(m = grid)
+    a = game_of_life.display(m = grid)
     e = " *  0 \n *  0 \n *  0 \n"
     assert a == e
+

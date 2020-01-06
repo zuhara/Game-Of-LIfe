@@ -43,7 +43,7 @@ def next_generation(m):
     return next_gen
 
 
-def dispaly(m):
+def display(m):
     string = ""
     for  i in range(len(m)):
         for j in range(len(m[0])):
@@ -53,3 +53,12 @@ def dispaly(m):
                 string = string + " * "
         string = string + "\n"
     return string
+
+grid = [[False,True,False],[False,True,False],[False,True,False]]
+n = 1
+while n < 10:
+    n = n + 1
+    m = next_generation(grid)
+    grid = m
+    d = display(grid)
+    print(d)
