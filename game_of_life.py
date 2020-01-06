@@ -21,7 +21,8 @@ def next_generation(m):
     rows = len(m)
     cols = len(m[0])
     
-    next_gen = [[0 for i in range(rows)] for j in range(cols)]
+    
+    next_gen = [[0 for i in range(cols)] for j in range(rows)]
 
     for i in range(rows):
         for j in range(cols):
